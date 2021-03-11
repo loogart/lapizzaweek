@@ -1,0 +1,1097 @@
+// Import Google fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,800;1,400;1,500;1,600;1,800&display=swap');
+
+// Required
+@import "../bootstrap/scss/functions";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+// Define new colors
+$beige:#F4B88C;
+$brown:#57484C;
+
+// Re-define BS colors
+$orange:#F59745;
+$green: #4A9343;
+$red: #EB422E;
+$black: #261C1F;
+
+// Map colors
+$colors: ("red":$red, "$beige":$beige, "brown":$brown,  "orange":$orange);
+
+//Map theme-colors
+$theme-colors: ("success": $green, "danger":$red,"warning":$orange, "light":$beige, "dark":$black, "info":$brown);
+
+
+// customize theme
+$body-bg: $black;
+$body-color:white;
+$font-family-sans-serif: 'Poppins',
+sans-serif;
+$headings-font-family:'Poppins',
+sans-serif;
+$input-font-family: 'Poppins',
+sans-serif;
+$font-family-base: $input-font-family;
+
+// customize navbar
+$navbar-brand-font-size:14px;
+$navbar-padding-y: $spacer/2;
+$navbar-padding-x: $spacer;
+$navbar-nav-link-padding-x:$spacer;
+$navbar-dark-toggler-border-color: transparent;
+$navbar-dark-color: rgba(255,255,255, .8);
+$navbar-dark-hover-color: $orange;
+$navbar-dark-active-color: $orange;
+
+// customize links
+$link-color: $orange;
+$link-hover-color: lighten($link-color, 15%);
+$border-width:2px;
+$btn-border-radius: 120px;
+$btn-border-radius-lg: 120px;
+$btn-border-radius-sm: 60px;
+$btn-padding-y-lg: $spacer/2;
+$btn-padding-x-lg: $spacer*1.5;
+$btn-border-width:1px;
+
+// customize custom form inputs
+$custom-control-indicator-checked-bg: $green;
+$custom-control-indicator-active-bg:$green;
+$custom-control-indicator-checked-border-color:$green;
+$input-focus-box-shadow:0 0 0 0.2rem rgba(0, 154, 222, 0.14);
+$custom-control-indicator-bg: $black;
+$custom-control-indicator-border-color:white;
+
+// customize forms
+$input-border-color: $beige;
+$input-bg: $black;
+$input-border-width:1px;
+$input-border-radius: 8px;
+$input-color: white;
+$input-focus-color: white;
+$input-focus-border-color:$orange;
+$input-placeholder-color:$brown;
+$input-focus-bg: darken($black,2%);
+
+// custom select
+$custom-select-bg: $black;
+$custom-select-font-size-lg: $font-size-base;
+$custom-select-border-radius: 8px;
+$custom-select-border-width: 2px;
+$custom-select-border-color: $beige;
+$custom-select-height-lg:44px;
+$custom-select-color: white;
+
+$transition-collapse:height .15s ease-in-out;
+$text-muted:$brown;
+
+// customize modals
+$modal-content-border-radius: 24px;
+$modal-header-border-width:0;
+$modal-footer-border-width:0;
+$modal-header-border-color:transparent;
+$modal-footer-border-color:transparent;
+$modal-fade-transform: scale(1.2) translate(0, 50px);
+$modal-transition: transform .15s ease-out;
+
+// customize dropdowns
+$dropdown-bg: $black;
+$dropdown-border-color:darken($brown, 5%);
+$dropdown-link-color: white;
+$dropdown-link-hover-color: black;
+$dropdown-link-hover-bg: darken($orange, 5%);
+$dropdown-link-active-color: white;
+$dropdown-link-active-bg: $red;
+$dropdown-link-disabled-color: darken($beige, 15%);
+$dropdown-item-padding-y: $spacer/1.25;
+$dropdown-item-padding-x: $spacer*1.25;
+$dropdown-padding-y:0;
+
+$card-border-color:white;
+
+// Bootstrap
+@import "../bootstrap/scss/bootstrap.scss";
+
+html {
+    scroll-behavior: smooth;
+}
+
+// Typography
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 800;
+}
+
+h1 {
+    font-size: 44px;
+    margin-bottom:20px;
+
+    @include media-breakpoint-down(sm) {
+        font-size: 32px;
+    }
+
+    &.jumbo {
+        font-size: 58px;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 32px;
+        }
+    }
+}
+
+h2 {
+    margin-bottom:20px;
+}
+
+h3 {}
+
+.subtitle {
+    display: block;
+    color: $beige;
+    font-weight: 400;
+    font-size: $font-size-base*1.5;
+    margin-top: $spacer;
+    margin-bottom: $spacer;
+    line-height: 1.25;
+
+    @include media-breakpoint-down(sm) {
+        font-size: $font-size-base;
+        margin-top: $spacer;
+        margin-bottom: $spacer;
+    }
+
+    &.top {
+        color: $red;
+        font-weight: 700;
+        margin-bottom: $spacer/2;
+    }
+}
+
+p.lead {
+    @include media-breakpoint-down(sm) {
+        font-size: $font-size-base;
+    }
+}
+
+// navbar styles
+.navbar-border-bottom {
+    border-bottom: 1px solid $beige;
+}
+
+.navbar-brand,
+.nav-link {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.dropdown-menu {
+    box-shadow:
+        0 2.1px 5.3px rgba(0,0,0, 0.028),
+        0 7.1px 17.9px rgba(0,0,0,  0.042),
+        0 32px 80px rgba(0,0,0,  0.07);
+}
+
+// large cta buttons
+
+.btn-lg {
+    &.big-cta {
+        box-shadow:
+            0 0.7px 1.2px rgba(0,0,0, 0.043),
+            0 1.7px 3px rgba(0,0,0, 0.062),
+            0 3.4px 6.2px rgba(0,0,0, 0.078),
+            0 6.9px 12.8px rgba(0,0,0, 0.097),
+            0 19px 35px rgba(0,0,0, 0.14);
+        margin-top: $spacer/2;
+        margin-bottom: $spacer;
+        padding: $spacer/2 $spacer*3;
+    }
+
+}
+
+// header area
+.logo-header-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $spacer;
+
+    @include media-breakpoint-down(sm) {
+        padding: 0;
+    }
+
+}
+
+.logo-header {
+    width: 160px;
+
+    @include media-breakpoint-down(sm) {
+        width: 86px;
+    }
+}
+
+// general sections
+
+section {
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+section.title {
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+section.content {
+    padding-top: 15px;
+    padding-bottom: 80px;
+}
+
+// homepage hero
+section.hero {
+    padding-top: 15px;
+    padding-bottom: 80px !important;
+}
+
+section.results {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-img-wrapper {
+    position: relative;
+    text-align: center;
+
+    @include media-breakpoint-down(sm) {
+        // margin-top: -40px
+    }
+}
+
+.hero-img {
+    max-width: 969px;
+
+    @include media-breakpoint-down(md) {
+        object-fit: contain;
+        width: 95%;
+        height: 200px;
+        object-position: 50%;
+    }
+    @include media-breakpoint-down(xs) {
+        object-fit: cover;
+        width: 100%;
+        height: 180px;
+        object-position: 75%;
+    }
+}
+
+section.with-box {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+.section-box {
+    background-color: darken($black,1%);
+    border: 2px solid lighten($black,2%);
+    border-radius: 8px;
+    padding: 40px $spacer;
+    width: 100%;
+
+    &.section-box__winners {
+        background-image: url(../img/artwork/pug-hat.png), url(../img/artwork/man-cool-shirt.png);
+        background-repeat: no-repeat, no-repeat;
+        background-position: 10% 80%, 96% 120%;
+        background-size: 150px, 200px;
+
+        @include media-breakpoint-down(lg) {
+            background-position: 0% 80%, 105% 120%;
+        }
+
+        @include media-breakpoint-down(md) {
+            background-position: -5% 105%, 110% 150%;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding-top: 40px;
+            padding-bottom: 150px;
+            background-position: -8% 110%, 110% 140%;
+        }
+    }
+
+}
+
+.section-box-mini {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    background-color: darken($black,1%);
+    border: 2px solid $brown;
+    border-radius: 8px;
+    padding: 30px $spacer;
+    width: 100%;
+    text-align: center;
+
+    &.saputo {
+        background-color: $red;
+        border: $red;
+        color: white;
+    }
+
+    &.skip {
+        background-color: $orange;
+        border: $orange;
+        color: white;
+    }
+
+    &.franchise {
+        display: block;
+        padding: $spacer;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+}
+
+.width-25 {
+    width: 24%;
+
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+    }
+}
+
+.width-33 {
+    width: 33%;
+
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+    }
+}
+
+.width-40 {
+    width: 39%;
+
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+    }
+}
+
+.width-60 {
+    width: 59%;
+
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+    }
+}
+
+.width-67 {
+    width: 66%;
+
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+    }
+}
+
+.width-75 {
+    width: 74%;
+
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+    }
+}
+
+
+
+.narrow-text {
+    max-width: 420px;
+    margin: $spacer*1.5 auto;
+}
+
+.grid-stats {
+    margin-top: $spacer*3;
+    margin-bottom: $spacer*2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @include media-breakpoint-down(md) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include media-breakpoint-down(sm) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.stat:not(:last-child) {
+    border-right: 3px solid lighten($black, 2%);
+
+    @include media-breakpoint-down(md) {
+        border: none;
+    }
+
+    @include media-breakpoint-down(sm) {
+        border-bottom: 3px solid lighten($black, 2%);
+        padding-bottom: 40px;
+    }
+}
+
+.img-stat {
+    width: 169px;
+    height: 169px;
+    object-fit: contain;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.img-partners {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 20px;
+
+}
+
+.logo-partner-main {
+    width: 140px;
+    max-height: 69px;
+    margin: 20px;
+}
+
+.logo-partner {
+    width: 100px;
+    max-height: 36px;
+    margin: 20px;
+}
+
+.img-cta {
+    max-width: 369px;
+    margin-bottom: 30px;
+
+    @include media-breakpoint-down(sm) {
+        object-fit: cover;
+        width: 100%;
+        height: 200px;
+        object-position: 69%;
+    }
+}
+
+// winner section
+.winners-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+a.winner-item {
+    display: flex;
+    margin-bottom: 20px;
+    width: 45%;
+    text-decoration: none;
+    transition: all .15s ease-in-out;
+    
+    &:hover,&:focus,&:active{
+        opacity:.8;
+    }
+
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+    }
+}
+
+.img-winner {
+    object-fit: cover;
+    width: 120px;
+    height: 80px;
+    border-radius: 12px;
+    background-color: $beige;
+}
+
+.faq-item {
+    margin-bottom: $spacer*4;
+}
+
+h2.faq {
+    font-weight: 600;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.faq-subtitle {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: $red;
+}
+
+.check-terms {
+    margin-top: $spacer;
+    color: $brown;
+    font-size: 11px;
+    padding-top: 4px;
+
+    a {
+        color: $brown;
+    }
+}
+
+section.sign-up {
+    background-image: url(../img/artwork/delivery-shocked.png), url(../img/artwork/takeout-resto.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 2% 95%, 95% 0%;
+    background-size: 300px, 320px;
+
+    @include media-breakpoint-down(md) {
+        background-position: -15% 105%, 125% 0%;
+    }
+
+    @include media-breakpoint-down(sm) {
+        background-image: none;
+    }
+}
+
+// custom select plan button
+.select-plan {
+    float: left;
+    margin: 0 5px 0 0;
+    width: 100%;
+    height: 48px;
+    position: relative;
+    text-align: center;
+}
+
+label{
+    color:$orange;
+}
+
+.select-plan label,
+.select-plan input {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 2rem;
+}
+
+.select-plan input[type="radio"] {
+    opacity: 0.01;
+    z-index: 100;
+}
+
+.select-plan input[type="radio"]:checked + label,
+.Checked + label {
+    background: $brown;
+    color: white;
+}
+
+.select-plan input[type="radio"]:checked + label::after,
+.Checked + label::after {
+    content: "ed";
+}
+
+.select-plan label {
+    padding: 7px;
+    border: 2px solid $brown;
+    cursor: pointer;
+    z-index: 90;
+}
+
+.select-plan label:hover {
+    background: $brown;
+    color: white;
+}
+
+
+/* Leaderboard css */
+a.leaderboard-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: $spacer/2;
+    background-color: $beige;
+    border: 2px solid $beige;
+    border-radius: 8px;
+    padding: $spacer*1.5;
+    width: 100%;
+    text-decoration: none;
+    transition: all .15s ease-out;
+
+    @include media-breakpoint-down(xs) {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        transform: translateX(-10px);
+    }
+}
+
+.leaderboard-top {
+    display: flex;
+    align-items: center;
+    width: auto;
+
+    @include media-breakpoint-down(sm) {
+        align-items: center;
+    }
+}
+
+.leaderboard-bottom {
+    justify-content: flex-start;
+}
+
+
+.leaderboard-number {
+    font-size: $font-size-base*3;
+    font-weight: 900;
+    width: $spacer*1.5;
+
+    @include media-breakpoint-down(sm) {
+        width: 10%;
+    }
+}
+
+.leaderboard-photo {
+    background-color: $brown;
+    width: 100px;
+    margin-left: $spacer*1.5;
+    margin-right: $spacer*1.5;
+    border-radius: 8px;
+
+    @include media-breakpoint-down(xs) {
+        margin-bottom: $spacer;
+        height: 80px;
+        object-fit: cover;
+
+    }
+}
+
+.leaderboard-title {
+    display: block;
+    font-weight: bold;
+    font-size: $font-size-base*1.25;
+    line-height: 1.2;
+    margin-bottom: 5px;
+
+    @include media-breakpoint-down(sm) {
+        font-size: $font-size-base;
+    }
+}
+
+.leaderboard-info {
+    display: block;
+    font-size: $font-size-base*.8;
+
+    @include media-breakpoint-down(sm) {}
+}
+
+/* nav filter */
+.nav-filter {
+    padding-top: $spacer/2;
+    padding-bottom: $spacer/2;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 2;
+    background-color: $beige;
+    border-bottom: 1px solid $beige;
+
+    .btn {
+        border-radius: 8px;
+    }
+}
+
+.logo-filter {
+    width: 50px;
+
+    @include media-breakpoint-down(sm) {
+        width: 40px
+    }
+
+}
+
+.flexselect_dropdown {
+    display: none;
+    position: absolute;
+    z-index: 999999;
+    margin: 0;
+    padding: 0;
+    border: 1px solid WindowFrame;
+    max-height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: Window;
+    color: WindowText;
+    text-align: left;
+    box-shadow: 0 6px 12px rgba(0,0,0, 0.19);
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0, 0.19);
+    border-radius: 8px;
+}
+
+.flexselect_dropdown ul {
+    width: 100%;
+    list-style-position: outside;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.flexselect_dropdown li {
+    margin: 0px;
+    padding: 15px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    font: Menu;
+    overflow: hidden;
+}
+
+.flexselect_dropdown li.disabled {
+    cursor: not-allowed;
+    color: GrayText;
+}
+
+.flexselect_selected {
+    background-color: $red;
+    color: white;
+}
+
+/* grid results and map */
+#map {
+    width: 100%;
+    height: 100vh;
+}
+
+.grid-items {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+a.grid-item {
+    display: inline-block;
+    width: 20%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 40px;
+    text-decoration: none;
+    position: relative;
+
+    .img-item {
+        border-radius: 12px;
+        margin-bottom: 20px;
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        transition: .25s all ease-out;
+
+        @include media-breakpoint-down(xs) {
+            height: 200px;
+        }
+    }
+
+    .logo-saputo-grid {
+        display: inline-block;
+        position: absolute;
+        top: 16px;
+        left: 24px;
+        width: 50px;
+        z-index: 1;
+    }
+
+    &:hover .img-item {
+        opacity: .8;
+        transform: translateY(-5px);
+    }
+
+    .price,
+    .distance {
+        color: lighten($brown, 20%);
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    @include media-breakpoint-down(lg) {
+        width: 25%;
+    }
+
+    @include media-breakpoint-down(md) {
+        width: 33%;
+    }
+
+    @include media-breakpoint-down(sm) {
+        width: 50%;
+    }
+
+    @include media-breakpoint-down(xs) {
+        width: 100%;
+    }
+
+    &.for-map {
+        width: 100%;
+        margin-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+
+.resto-name {
+    display: block;
+    color: $red;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.item-name {
+    display: block;
+    color: black;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 1.25;
+}
+
+.saputo-badge {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 15px;
+}
+
+.logo-saputo {
+    height: 40px;
+    margin: auto 3px;
+}
+
+.btn-skip {
+    background-color: $orange;
+    color: white;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: white;
+        background-color: #bf6000
+    }
+}
+
+.btn-dinetab {
+    background-color: black;
+    color: white;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: white;
+        background-color: #222;
+    }
+}
+
+.logo-in-button {
+    display: inline-block;
+    width: 75px;
+    margin-left: 5px;
+}
+
+.vote-box {
+    align-items: center;
+    background-color: $beige;
+    border: 2px solid $beige;
+    border-radius: 8px;
+    padding: 30px $spacer;
+    width: 100%;
+    text-align: center;
+
+    @include media-breakpoint-down(sm) {
+        position: fixed;
+        background-color: $beige;
+        border-radius: 0;
+        border-top: 2px solid $beige;
+        padding: 12px $spacer;
+        width: 100%;
+        min-height: 20px;
+        z-index: 1000;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+
+
+.img-map {
+    height: 120px;
+    max-width: 200px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+}
+
+.preview-modal,
+.item {
+    .modal-content {
+        border-radius: 24px;
+        overflow: hidden;
+    }
+
+    .modal-photo {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .modal-photo-holder {
+        background-color: $beige;
+        width: 100%;
+        text-align: center;
+    }
+
+    h2.modal-resto {
+        font-size: 20px;
+        color: $red;
+        margin-bottom: 7px;
+    }
+
+    h3.modal-item,
+    h3.modal-price {
+        font-size: 28px;
+        color: $dark;
+        font-weight: bold;
+    }
+
+    .btn {
+        box-shadow: none;
+    }
+
+    .close {
+        width: 32px;
+        height: 32px;
+        top: 12px;
+        right: 12px;
+        z-index: 2000;
+        position: absolute;
+        background-color: white;
+        border-radius: 32px;
+    }
+
+    .logo-charity {
+        width: 140px;
+    }
+}
+
+details {
+    summary {
+        margin-bottom: $spacer;
+    }
+
+    ul {}
+
+    li {
+        margin-bottom: $spacer/2;
+    }
+}
+
+/* resto page */
+.img-item {
+    border-radius: $spacer*1.5;
+}
+
+.btn-rate {
+    transition: all .15s ease-out;
+    width: 33%;
+    text-align: center;
+
+    &:hover,
+    &:focus,
+    &:active,
+    .active {
+        color: $red;
+        transform: scale(1.1);
+        text-decoration: none;
+    }
+}
+
+.promocode{
+    display: inline-block;
+    padding:$spacer/2 $spacer;
+    border:3px solid black;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+footer {
+    padding-top: 100px;
+    padding-bottom: 120px;
+    border-top: 1px solid lighten($black,2%);
+    background-image: url('../img/artwork/freddie-footer.png');
+    background-size: 220px;
+    background-position: 90% 70%;
+    background-repeat: no-repeat;
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        background-size: 200px;
+    }
+
+    h6 {
+        margin-bottom: 20px;
+        color:$orange;
+    }
+
+    .list-unstyled li {
+        margin-bottom: 12px;
+    }
+    a{
+        color:white;
+    }
+
+}
+
+.logo-footer {
+    width: 100px;
+    margin-bottom: $spacer*1.25;
+}
+
+.text-subfooter {
+    display: block;
+    margin-top: $spacer*3;
+    font-size: 10px;
+
+    a {
+        color: $brown;
+    }
+}
+
+.bullet-faq{
+    display: inline-block;
+    width:32px;
+    height:32px;
+    margin-right:10px;
+    transform: rotate(30deg);
+}
