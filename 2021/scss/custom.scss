@@ -10,17 +10,20 @@
 $beige:#F4B88C;
 $brown:#57484C;
 
+
 // Re-define BS colors
 $orange:#F59745;
 $green: #4A9343;
 $red: #EB422E;
 $black: #261C1F;
+$blacker:#21191B;
+$white: #FAF8F8;
 
 // Map colors
-$colors: ("red":$red, "$beige":$beige, "brown":$brown,  "orange":$orange);
+$colors: ("red":$red, "$beige":$beige, "brown":$brown,  "orange":$orange, "white":$white);
 
 //Map theme-colors
-$theme-colors: ("success": $green, "danger":$red,"warning":$orange, "light":$beige, "dark":$black, "info":$brown);
+$theme-colors: ("success": $green, "danger":$red,"warning":$orange, "light":$white, "dark":$black, "info":$brown);
 
 
 // customize theme
@@ -96,15 +99,15 @@ $modal-fade-transform: scale(1.2) translate(0, 50px);
 $modal-transition: transform .15s ease-out;
 
 // customize dropdowns
-$dropdown-bg: $black;
-$dropdown-border-color:darken($brown, 5%);
-$dropdown-link-color: white;
-$dropdown-link-hover-color: black;
-$dropdown-link-hover-bg: darken($orange, 5%);
-$dropdown-link-active-color: white;
+$dropdown-bg: $white;
+$dropdown-border-color:$black;
+$dropdown-link-color: $black;
+$dropdown-link-hover-color: $black;
+$dropdown-link-hover-bg: $gray-200;
+$dropdown-link-active-color: $white;
 $dropdown-link-active-bg: $red;
-$dropdown-link-disabled-color: darken($beige, 15%);
-$dropdown-item-padding-y: $spacer/1.25;
+$dropdown-link-disabled-color: $gray-300;
+$dropdown-item-padding-y: $spacer;
 $dropdown-item-padding-x: $spacer*1.25;
 $dropdown-padding-y:0;
 
@@ -154,10 +157,10 @@ h3 {}
 .subtitle {
     display: block;
     color: $beige;
-    font-weight: 400;
+    font-weight: 500;
     font-size: $font-size-base*1.5;
     margin-top: $spacer;
-    margin-bottom: $spacer;
+    margin-bottom: $spacer/2;
     line-height: 1.25;
 
     @include media-breakpoint-down(sm) {
@@ -188,6 +191,13 @@ p.lead {
 .nav-link {
     font-weight: 500;
     font-size: 14px;
+}
+
+.navbar-logo{
+    width:120px;
+    @include media-breakpoint-down(sm) {
+        width:80px;
+    }
 }
 
 .dropdown-menu {
@@ -228,8 +238,7 @@ p.lead {
 }
 
 .logo-header {
-    width: 160px;
-
+    width: 120px;
     @include media-breakpoint-down(sm) {
         width: 86px;
     }
@@ -247,6 +256,10 @@ section {
         padding-top: 40px;
         padding-bottom: 40px;
     }
+}
+
+.bg-darker{
+    background-color:$blacker;
 }
 
 section.title {
@@ -495,6 +508,21 @@ section.with-box {
     }
 }
 
+.partner-card{
+    position: relative;
+    background-color:#2E2427;
+    border-radius: $spacer;
+    padding:0 $spacer $spacer*2;
+    margin-bottom: $spacer*2;
+}
+.partner-card-logo{
+        width:120px;
+        height:86px;
+        object-fit: contain;
+        display: block;
+        margin:$spacer auto;
+}
+
 // winner section
 .winners-grid {
     display: flex;
@@ -540,7 +568,7 @@ h2.faq {
 .faq-subtitle {
     font-weight: 600;
     font-size: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: $red;
 }
 
@@ -626,42 +654,26 @@ label{
 
 /* Leaderboard css */
 a.leaderboard-box {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    display: block;
+    text-align: left;
     margin-bottom: $spacer/2;
-    background-color: $beige;
-    border: 2px solid $beige;
     border-radius: 8px;
-    padding: $spacer*1.5;
-    width: 100%;
+    width: 15%;
     text-decoration: none;
     transition: all .15s ease-out;
-
+    margin-bottom: $spacer*3;
+    @include media-breakpoint-down(md) {
+        width: 45%;
+    }
     @include media-breakpoint-down(xs) {
-        align-items: flex-start;
-        flex-direction: column;
+        width: 100%;
     }
 
     &:hover,
     &:focus,
     &:active {
-        transform: translateX(-10px);
+        transform: translateY(-5px);
     }
-}
-
-.leaderboard-top {
-    display: flex;
-    align-items: center;
-    width: auto;
-
-    @include media-breakpoint-down(sm) {
-        align-items: center;
-    }
-}
-
-.leaderboard-bottom {
-    justify-content: flex-start;
 }
 
 
@@ -669,6 +681,7 @@ a.leaderboard-box {
     font-size: $font-size-base*3;
     font-weight: 900;
     width: $spacer*1.5;
+    color:$orange;
 
     @include media-breakpoint-down(sm) {
         width: 10%;
@@ -677,16 +690,13 @@ a.leaderboard-box {
 
 .leaderboard-photo {
     background-color: $brown;
-    width: 100px;
-    margin-left: $spacer*1.5;
-    margin-right: $spacer*1.5;
+    width: 100%;
+    height:120px;
     border-radius: 8px;
-
+    object-fit: cover;
+    margin-bottom: $spacer/2;
     @include media-breakpoint-down(xs) {
-        margin-bottom: $spacer;
-        height: 80px;
-        object-fit: cover;
-
+        height:240px;
     }
 }
 
@@ -696,6 +706,7 @@ a.leaderboard-box {
     font-size: $font-size-base*1.25;
     line-height: 1.2;
     margin-bottom: 5px;
+    color:$orange;
 
     @include media-breakpoint-down(sm) {
         font-size: $font-size-base;
@@ -705,6 +716,7 @@ a.leaderboard-box {
 .leaderboard-info {
     display: block;
     font-size: $font-size-base*.8;
+    color:white;
 
     @include media-breakpoint-down(sm) {}
 }
