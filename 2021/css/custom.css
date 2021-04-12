@@ -10566,11 +10566,20 @@ a.leaderboard-box:hover, a.leaderboard-box:focus, a.leaderboard-box:active {
 }
 
 .nav-filter-filters {
-  width: 20%;
+  width: 30%;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .nav-filter-filters {
     width: 50%;
+  }
+}
+
+.nav-filter-location {
+  padding-left: 10px;
+}
+@media (max-width: 767.98px) {
+  .nav-filter-location {
+    padding-left: 0;
   }
 }
 
@@ -10637,18 +10646,27 @@ a.leaderboard-box:hover, a.leaderboard-box:focus, a.leaderboard-box:active {
   justify-content: flex-start;
   flex-wrap: wrap;
   width: 100%;
+  height: auto;
 }
 
-a.grid-item {
-  display: inline-block;
+.grid-item {
+  display: block;
   width: 20%;
-  padding-left: 10px;
-  padding-right: 10px;
   margin-bottom: 40px;
   text-decoration: none;
   position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
 }
-a.grid-item .img-item {
+.grid-item a.grid-item-link {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  text-decoration: none;
+}
+.grid-item .img-item {
   border-radius: 12px;
   margin-bottom: 20px;
   width: 100%;
@@ -10657,11 +10675,11 @@ a.grid-item .img-item {
   transition: 0.25s all ease-out;
 }
 @media (max-width: 575.98px) {
-  a.grid-item .img-item {
+  .grid-item .img-item {
     height: 200px;
   }
 }
-a.grid-item .logo-saputo-grid {
+.grid-item .logo-saputo-grid {
   display: inline-block;
   position: absolute;
   top: 16px;
@@ -10669,49 +10687,58 @@ a.grid-item .logo-saputo-grid {
   width: 50px;
   z-index: 1;
 }
-a.grid-item .add-favourite {
+.grid-item .add-favourite {
   display: inline-block;
   position: absolute;
   top: 16px;
   right: 24px;
   z-index: 1;
 }
-a.grid-item:hover .img-item {
+.grid-item:hover .img-item {
   opacity: 0.8;
   transform: translateY(-5px);
 }
-a.grid-item .price,
-a.grid-item .distance {
+.grid-item .price,
+.grid-item .distance {
   color: #261C1F;
   font-size: 14px;
   font-weight: bold;
   margin-top: 10px;
 }
 @media (max-width: 1199.98px) {
-  a.grid-item {
+  .grid-item {
     width: 25%;
   }
 }
 @media (max-width: 991.98px) {
-  a.grid-item {
+  .grid-item {
     width: 33%;
   }
 }
 @media (max-width: 767.98px) {
-  a.grid-item {
+  .grid-item {
     width: 50%;
   }
 }
 @media (max-width: 575.98px) {
-  a.grid-item {
+  .grid-item {
     width: 100%;
   }
 }
-a.grid-item.for-map {
+.grid-item.for-map {
   width: 100%;
   margin-bottom: 0;
   padding-left: 0;
   padding-right: 0;
+}
+
+.btn-fave, .btn-fave-account {
+  z-index: 1;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 12px;
+  right: 32px;
 }
 
 .resto-name {

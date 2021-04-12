@@ -438,3 +438,43 @@ $('#voteNow').click(function () {
         $(this).removeClass('btn-danger').addClass('btn-outline-danger').text("Remove rating");
     }
 });
+
+// toggle fave button
+$('.btn-fave').click(function () {
+    if ($(this).hasClass("text-danger")) {
+        $(this).removeClass('text-danger').addClass('text-light');
+        ($(this).children()).removeClass('fas').addClass('fal');
+        $('#elementRemoved').toast('show');
+        
+    } else {
+        $(this).removeClass('text-light').addClass('text-danger');
+        ($(this).children()).removeClass('fal').addClass('fas');
+        $('#elementSaved').toast('show');
+    }
+});
+
+// toggle fave button on account page
+$('.btn-fave-account').click(function () {
+        $(this).removeClass('text-danger').addClass('text-light');
+        ($(this).children()).removeClass('fas').addClass('fal');
+        $('#elementRemoved').toast('show');
+        $(this).parent().hide();
+        $(this).hide();
+});
+
+// toggle fave button on resto page
+$('.btn-fave-page').click(function () {
+    if ($(this).hasClass("btn-outline-danger")) {
+        $(this).removeClass('btn-outline-danger').addClass('btn-outline-dark').text("❤️ Save for later");
+        $('#elementRemoved').toast('show');
+        
+    } else {
+        $(this).removeClass('btn-outline-dark').addClass('btn-outline-danger').text("❌  Remove from Saved");
+        $('#elementSaved').toast('show');
+    }
+});
+
+// tooltip above save button on grid
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
