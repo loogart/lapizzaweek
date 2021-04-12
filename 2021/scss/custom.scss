@@ -20,10 +20,10 @@ $blacker:#21191B;
 $white: #FAF8F8;
 
 // Map colors
-$colors: ("red":$red, "$beige":$beige, "brown":$brown,  "orange":$orange, "white":$white);
+$colors: ("red":$red, "$beige":$beige, "brown":$brown, "orange":$orange, "white":$white);
 
 //Map theme-colors
-$theme-colors: ("success": $green, "danger":$red,"warning":$orange, "light":$white, "dark":$black, "info":$brown);
+$theme-colors: ("success": $green, "danger":$red, "warning":$orange, "light":$white, "dark":$black, "info":$brown);
 
 
 // customize theme
@@ -43,13 +43,13 @@ $navbar-padding-y: $spacer/2;
 $navbar-padding-x: $spacer;
 $navbar-nav-link-padding-x:$spacer;
 $navbar-dark-toggler-border-color: transparent;
-$navbar-dark-color: rgba(255,255,255, .8);
+$navbar-dark-color: rgba(255, 255, 255, .8);
 $navbar-dark-hover-color: $orange;
 $navbar-dark-active-color: $orange;
 
 // customize links
-$link-color: $orange;
-$link-hover-color: lighten($link-color, 15%);
+$link-color: $brown;
+$link-hover-color: $orange;
 $border-width:2px;
 $btn-border-radius: 120px;
 $btn-border-radius-lg: 120px;
@@ -63,8 +63,8 @@ $custom-control-indicator-checked-bg: $green;
 $custom-control-indicator-active-bg:$green;
 $custom-control-indicator-checked-border-color:$green;
 $input-focus-box-shadow:0 0 0 0.2rem rgba(0, 154, 222, 0.14);
-$custom-control-indicator-bg: $black;
-$custom-control-indicator-border-color:white;
+$custom-control-indicator-bg: $white;
+$custom-control-indicator-border-color:$black;
 
 // customize forms
 $input-border-color: $beige;
@@ -75,16 +75,16 @@ $input-color: white;
 $input-focus-color: white;
 $input-focus-border-color:$orange;
 $input-placeholder-color:$brown;
-$input-focus-bg: darken($black,2%);
+$input-focus-bg: darken($black, 2%);
 
 // custom select
-$custom-select-bg: $black;
+$custom-select-bg: $white;
 $custom-select-font-size-lg: $font-size-base;
 $custom-select-border-radius: 8px;
 $custom-select-border-width: 2px;
 $custom-select-border-color: $beige;
 $custom-select-height-lg:44px;
-$custom-select-color: white;
+$custom-select-color: $black;
 
 $transition-collapse:height .15s ease-in-out;
 $text-muted:$brown;
@@ -133,7 +133,7 @@ h6 {
 
 h1 {
     font-size: 44px;
-    margin-bottom:20px;
+    margin-bottom: 20px;
 
     @include media-breakpoint-down(sm) {
         font-size: 32px;
@@ -149,7 +149,7 @@ h1 {
 }
 
 h2 {
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
 
 h3 {}
@@ -193,18 +193,19 @@ p.lead {
     font-size: 14px;
 }
 
-.navbar-logo{
-    width:120px;
+.navbar-logo {
+    width: 120px;
+
     @include media-breakpoint-down(sm) {
-        width:80px;
+        width: 80px;
     }
 }
 
 .dropdown-menu {
     box-shadow:
-        0 2.1px 5.3px rgba(0,0,0, 0.028),
-        0 7.1px 17.9px rgba(0,0,0,  0.042),
-        0 32px 80px rgba(0,0,0,  0.07);
+        0 2.1px 5.3px rgba(0, 0, 0, 0.028),
+        0 7.1px 17.9px rgba(0, 0, 0, 0.042),
+        0 32px 80px rgba(0, 0, 0, 0.07);
 }
 
 // large cta buttons
@@ -212,11 +213,11 @@ p.lead {
 .btn-lg {
     &.big-cta {
         box-shadow:
-            0 0.7px 1.2px rgba(0,0,0, 0.043),
-            0 1.7px 3px rgba(0,0,0, 0.062),
-            0 3.4px 6.2px rgba(0,0,0, 0.078),
-            0 6.9px 12.8px rgba(0,0,0, 0.097),
-            0 19px 35px rgba(0,0,0, 0.14);
+            0 0.7px 1.2px rgba(0, 0, 0, 0.043),
+            0 1.7px 3px rgba(0, 0, 0, 0.062),
+            0 3.4px 6.2px rgba(0, 0, 0, 0.078),
+            0 6.9px 12.8px rgba(0, 0, 0, 0.097),
+            0 19px 35px rgba(0, 0, 0, 0.14);
         margin-top: $spacer/2;
         margin-bottom: $spacer;
         padding: $spacer/2 $spacer*3;
@@ -239,6 +240,7 @@ p.lead {
 
 .logo-header {
     width: 120px;
+
     @include media-breakpoint-down(sm) {
         width: 86px;
     }
@@ -258,8 +260,8 @@ section {
     }
 }
 
-.bg-darker{
-    background-color:$blacker;
+.bg-darker {
+    background-color: $blacker;
 }
 
 section.title {
@@ -281,6 +283,8 @@ section.hero {
 section.results {
     padding-top: 0;
     padding-bottom: 0;
+    background-color: $light;
+    color: $black;
 }
 
 .hero-content {
@@ -306,6 +310,7 @@ section.results {
         height: 200px;
         object-position: 50%;
     }
+
     @include media-breakpoint-down(xs) {
         object-fit: cover;
         width: 100%;
@@ -325,8 +330,8 @@ section.with-box {
 }
 
 .section-box {
-    background-color: darken($black,1%);
-    border: 2px solid lighten($black,2%);
+    background-color: darken($black, 1%);
+    border: 2px solid lighten($black, 2%);
     border-radius: 8px;
     padding: 40px $spacer;
     width: 100%;
@@ -356,11 +361,11 @@ section.with-box {
 
 .section-box-mini {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: darken($black,1%);
-    border: 2px solid $brown;
+    background-color: $white;
+    border: 2px solid $black;
     border-radius: 8px;
     padding: 30px $spacer;
     width: 100%;
@@ -508,19 +513,20 @@ section.with-box {
     }
 }
 
-.partner-card{
+.partner-card {
     position: relative;
-    background-color:#2E2427;
+    background-color: #2E2427;
     border-radius: $spacer;
-    padding:0 $spacer $spacer*2;
+    padding: 0 $spacer $spacer*2;
     margin-bottom: $spacer*2;
 }
-.partner-card-logo{
-        width:120px;
-        height:86px;
-        object-fit: contain;
-        display: block;
-        margin:$spacer auto;
+
+.partner-card-logo {
+    width: 120px;
+    height: 86px;
+    object-fit: contain;
+    display: block;
+    margin: $spacer auto;
 }
 
 // winner section
@@ -537,9 +543,11 @@ a.winner-item {
     width: 45%;
     text-decoration: none;
     transition: all .15s ease-in-out;
-    
-    &:hover,&:focus,&:active{
-        opacity:.8;
+
+    &:hover,
+    &:focus,
+    &:active {
+        opacity: .8;
     }
 
     @include media-breakpoint-down(sm) {
@@ -608,8 +616,8 @@ section.sign-up {
     text-align: center;
 }
 
-label{
-    color:$orange;
+label {
+    color: $black;
 }
 
 .select-plan label,
@@ -628,14 +636,14 @@ label{
     z-index: 100;
 }
 
-.select-plan input[type="radio"]:checked + label,
-.Checked + label {
+.select-plan input[type="radio"]:checked+label,
+.Checked+label {
     background: $brown;
     color: white;
 }
 
-.select-plan input[type="radio"]:checked + label::after,
-.Checked + label::after {
+.select-plan input[type="radio"]:checked+label::after,
+.Checked+label::after {
     content: "ed";
 }
 
@@ -662,9 +670,11 @@ a.leaderboard-box {
     text-decoration: none;
     transition: all .15s ease-out;
     margin-bottom: $spacer*3;
+
     @include media-breakpoint-down(md) {
         width: 45%;
     }
+
     @include media-breakpoint-down(xs) {
         width: 100%;
     }
@@ -681,7 +691,7 @@ a.leaderboard-box {
     font-size: $font-size-base*3;
     font-weight: 900;
     width: $spacer*1.5;
-    color:$orange;
+    color: $orange;
 
     @include media-breakpoint-down(sm) {
         width: 10%;
@@ -691,12 +701,13 @@ a.leaderboard-box {
 .leaderboard-photo {
     background-color: $brown;
     width: 100%;
-    height:120px;
+    height: 120px;
     border-radius: 8px;
     object-fit: cover;
     margin-bottom: $spacer/2;
+
     @include media-breakpoint-down(xs) {
-        height:240px;
+        height: 240px;
     }
 }
 
@@ -706,7 +717,7 @@ a.leaderboard-box {
     font-size: $font-size-base*1.25;
     line-height: 1.2;
     margin-bottom: 5px;
-    color:$orange;
+    color: $orange;
 
     @include media-breakpoint-down(sm) {
         font-size: $font-size-base;
@@ -716,7 +727,7 @@ a.leaderboard-box {
 .leaderboard-info {
     display: block;
     font-size: $font-size-base*.8;
-    color:white;
+    color: white;
 
     @include media-breakpoint-down(sm) {}
 }
@@ -727,23 +738,59 @@ a.leaderboard-box {
     padding-bottom: $spacer/2;
     position: sticky;
     position: -webkit-sticky;
-    top: 0;
+    top: 73px;
     z-index: 2;
-    background-color: $beige;
-    border-bottom: 1px solid $beige;
+    background-color: $light;
+    border-bottom: 1px solid $black;
 
     .btn {
         border-radius: 8px;
     }
-}
-
-.logo-filter {
-    width: 50px;
 
     @include media-breakpoint-down(sm) {
-        width: 40px
+        top: 57px;
     }
+}
 
+.nav-filter-grid {
+    display: flex;
+
+    @include media-breakpoint-down(sm) {
+        flex-direction: column;
+    }
+}
+
+.nav-filter-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+.nav-filter-search {}
+
+.nav-filter-filters {
+    width: 20%;
+
+    @include media-breakpoint-down(sm) {
+        width: 50%;
+    }
+}
+
+.nav-filter-location {}
+
+.nav-filter-toggle {}
+
+
+.flexselect {
+    background-color: $white;
+    border: none;
+    width: 100%;
 }
 
 .flexselect_dropdown {
@@ -759,8 +806,8 @@ a.leaderboard-box {
     background-color: Window;
     color: WindowText;
     text-align: left;
-    box-shadow: 0 6px 12px rgba(0,0,0, 0.19);
-    -webkit-box-shadow: 0 6px 12px rgba(0,0,0, 0.19);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.19);
     border-radius: 8px;
 }
 
@@ -836,6 +883,13 @@ a.grid-item {
         width: 50px;
         z-index: 1;
     }
+    .add-favourite{
+        display: inline-block;
+        position: absolute;
+        top: 16px;
+       right: 24px;
+        z-index: 1;
+    }
 
     &:hover .img-item {
         opacity: .8;
@@ -844,8 +898,10 @@ a.grid-item {
 
     .price,
     .distance {
-        color: lighten($brown, 20%);
+        color: $black;
         font-size: 14px;
+        font-weight: bold;
+        ;
         margin-top: 10px;
     }
 
@@ -903,7 +959,7 @@ a.grid-item {
 }
 
 .btn-skip {
-    background-color: $orange;
+    background-color: #FD8000;
     color: white;
 
     &:hover,
@@ -928,14 +984,13 @@ a.grid-item {
 
 .logo-in-button {
     display: inline-block;
-    width: 75px;
-    margin-left: 5px;
+    width: 24px;
 }
 
 .vote-box {
     align-items: center;
-    background-color: $beige;
-    border: 2px solid $beige;
+    background-color: $white;
+    border: 2px solid $dark;
     border-radius: 8px;
     padding: 30px $spacer;
     width: 100%;
@@ -943,9 +998,10 @@ a.grid-item {
 
     @include media-breakpoint-down(sm) {
         position: fixed;
-        background-color: $beige;
+        background-color: $white;
         border-radius: 0;
-        border-top: 2px solid $beige;
+        border:none;
+        border-top: 2px solid $black;
         padding: 12px $spacer;
         width: 100%;
         min-height: 20px;
@@ -959,7 +1015,7 @@ a.grid-item {
 
 .img-map {
     height: 120px;
-    max-width: 200px;
+    max-width: 240px;
     margin-bottom: 12px;
     border-radius: 12px;
 }
@@ -978,7 +1034,7 @@ a.grid-item {
     }
 
     .modal-photo-holder {
-        background-color: $beige;
+        background-color: $black;
         width: 100%;
         text-align: center;
     }
@@ -1031,12 +1087,21 @@ details {
 /* resto page */
 .img-item {
     border-radius: $spacer*1.5;
+
+    @include media-breakpoint-down(sm) {
+
+        height: 220px;
+        width: 100%;
+        object-fit: cover;
+    }
+
 }
 
 .btn-rate {
     transition: all .15s ease-out;
     width: 33%;
     text-align: center;
+    color: $black;
 
     &:hover,
     &:focus,
@@ -1048,10 +1113,10 @@ details {
     }
 }
 
-.promocode{
+.promocode {
     display: inline-block;
-    padding:$spacer/2 $spacer;
-    border:3px solid black;
+    padding: $spacer/2 $spacer;
+    border: 3px solid black;
     font-weight: 500;
     font-size: 24px;
 }
@@ -1059,7 +1124,7 @@ details {
 footer {
     padding-top: 100px;
     padding-bottom: 120px;
-    border-top: 1px solid lighten($black,2%);
+    border-top: 1px solid lighten($black, 2%);
     background-image: url('../img/artwork/freddie-footer.png');
     background-size: 220px;
     background-position: 90% 70%;
@@ -1073,14 +1138,15 @@ footer {
 
     h6 {
         margin-bottom: 20px;
-        color:$orange;
+        color: $orange;
     }
 
     .list-unstyled li {
         margin-bottom: 12px;
     }
-    a{
-        color:white;
+
+    a {
+        color: white;
     }
 
 }
@@ -1100,10 +1166,10 @@ footer {
     }
 }
 
-.bullet-faq{
+.bullet-faq {
     display: inline-block;
-    width:32px;
-    height:32px;
-    margin-right:10px;
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
     transform: rotate(30deg);
 }

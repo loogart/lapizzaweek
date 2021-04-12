@@ -239,7 +239,7 @@ function initMap() {
     });
 
     var image = {
-        url: "../img/artwork/item-marker.png", // url
+        url: "../img/logo/map-marker.svg", // url
         scaledSize: new google.maps.Size(69, 69), // scaled size
         origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
@@ -270,8 +270,8 @@ function initMap() {
         '<div id="content">' +
         '<div id="siteNotice">' +
         '</div>' +
-        '<a href="./restaurant.html" class="grid-item for-map">' +
-        '<img src="../img/poutines/public-regions-1579527189458.jpg" class="img-map" alt="...">' +
+        '<a href="./restaurant.html" target="_blank" class="grid-item for-map">' +
+        '<img src="https://instagram.fymq2-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c0.169.1349.1349a/s640x640/169088158_473348593863884_7004601539434682593_n.jpg?tp=1&_nc_ht=instagram.fymq2-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=HWMcoXHZQggAX9IZg_G&edm=ABfd0MgAAAAA&ccb=7-4&oh=b4890ce53c72d596c1f0a6ac3aa9b41c&oe=60970274&_nc_sid=7bff83" class="img-map" alt="...">' +
         '<span class="resto-name">Restaurant Name</span>' +
         '<span class="item-name">Item Name</span>' +
         '<div class="d-flex justify-content-between">' +
@@ -305,8 +305,8 @@ function initMap() {
         '<div id="content">' +
         '<div id="siteNotice">' +
         '</div>' +
-        '<a href="./restaurant.html" class="grid-item for-map">' +
-        '<img src="../img/poutines/public-regions-1579617063259.jpg" class="img-map" alt="...">' +
+        '<a href="./restaurant.html" target="_blank" class="grid-item for-map">' +
+        '<img src="https://instagram.fymq2-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c0.169.1349.1349a/s640x640/169088158_473348593863884_7004601539434682593_n.jpg?tp=1&_nc_ht=instagram.fymq2-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=HWMcoXHZQggAX9IZg_G&edm=ABfd0MgAAAAA&ccb=7-4&oh=b4890ce53c72d596c1f0a6ac3aa9b41c&oe=60970274&_nc_sid=7bff83" class="img-map" alt="...">' +
         '<span class="resto-name">Restaurant Name</span>' +
         '<span class="item-name">Item Name</span>' +
         '<div class="d-flex justify-content-between">' +
@@ -340,8 +340,8 @@ function initMap() {
         '<div id="content">' +
         '<div id="siteNotice">' +
         '</div>' +
-        '<a href="./restaurant.html" class="grid-item for-map">' +
-        '<img src="../img/poutines/public-regions-1579623306245.jpg" class="img-map" alt="...">' +
+        '<a href="./restaurant.html" target="_blank" class="grid-item for-map">' +
+        '<img src="https://instagram.fymq2-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c0.169.1349.1349a/s640x640/169088158_473348593863884_7004601539434682593_n.jpg?tp=1&_nc_ht=instagram.fymq2-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=HWMcoXHZQggAX9IZg_G&edm=ABfd0MgAAAAA&ccb=7-4&oh=b4890ce53c72d596c1f0a6ac3aa9b41c&oe=60970274&_nc_sid=7bff83" class="img-map" alt="...">' +
         '<span class="resto-name">Restaurant Name</span>' +
         '<span class="item-name">Item Name</span>' +
         '<div class="d-flex justify-content-between">' +
@@ -375,8 +375,8 @@ function initMap() {
         '<div id="content">' +
         '<div id="siteNotice">' +
         '</div>' +
-        '<a href="./restaurant.html" class="grid-item for-map">' +
-        '<img src="../img/artwork/placeholder.jpg" class="img-map" alt="...">' +
+        '<a href="./restaurant.html" target="_blank" class="grid-item for-map">' +
+        '<img src="https://instagram.fymq2-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c0.169.1349.1349a/s640x640/169088158_473348593863884_7004601539434682593_n.jpg?tp=1&_nc_ht=instagram.fymq2-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=HWMcoXHZQggAX9IZg_G&edm=ABfd0MgAAAAA&ccb=7-4&oh=b4890ce53c72d596c1f0a6ac3aa9b41c&oe=60970274&_nc_sid=7bff83" class="img-map" alt="...">' +
         '<span class="resto-name">Restaurant Name</span>' +
         '<span class="item-name">Item Name</span>' +
         '<div class="d-flex justify-content-between">' +
@@ -432,9 +432,9 @@ $(function () {
 $('#voteNow').click(function () {
     if ($(this).hasClass("btn-outline-danger")) {
         $('#modalUnvoted').modal('show');
-        $(this).removeClass('btn-outline-danger').addClass('btn-primary').text("Rate  this poutine");
+        $(this).removeClass('btn-outline-danger').addClass('btn-danger').text("Rate  this poutine");
     } else {
         $('#modalVote1').modal('show');
-        $(this).removeClass('btn-primary').addClass('btn-outline-danger').text("Remove rating");
+        $(this).removeClass('btn-danger').addClass('btn-outline-danger').text("Remove rating");
     }
 });
