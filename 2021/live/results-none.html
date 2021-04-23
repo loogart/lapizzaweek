@@ -25,7 +25,7 @@
     <script src="https://kit.fontawesome.com/2d83ef6eb3.js" crossorigin="anonymous"></script>
 
     <!-- Primary Meta Tags -->
-    <title>No results | La Pizza Week 2021</title>
+    <title>Find a pizza | La Pizza Week 2021</title>
     <meta name="title" content="La Pizza Week">
     <meta name="description" content="May 1-7, 2021. If your restaurant makes a superb poutine, sign up today!">
 
@@ -40,40 +40,42 @@
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://loogart.github.io/lapizzaweek/2021">
     <meta property="twitter:title" content="La Pizza Week 2021 | Presented by Saputo">
-    <meta property="twitter:description" content="May 1-7, 2021. If your restaurant makes a superb pizza, sign up today!">
+    <meta property="twitter:description"
+        content="May 1-7, 2021. If your restaurant makes a superb pizza, sign up today!">
     <meta property="twitter:image" content="https://loogart.github.io/lapizzaeweek/2021/img/artwork/og-image.jpg">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="./">La Poutine Week</a>
-            <button class="navbar-toggler p-0" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="./"><img class="navbar-logo" src="../img/logo/logo-navbar-en.svg"
+                    alt="La Poutine Week Homepage" class=></a>
+            <button class="navbar-toggler p-0" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fal fa-chevron-circle-down"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="./results.html"><i class="fas fa-search mr-2 text-primary"></i>Find a poutine</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Winners
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="./winners-2020.html">2019</a>
-                            <a class="dropdown-item" href="./winners-2020.html">2020</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./faq.html">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./login.html">Login</a>
+                        <a class="nav-link" href="./results.html">🍕 Find a pizza</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#!">Français</a>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="far fa-user-circle mr-2" title="Account" aria-hidden="true"></i><span
+                                class="d-inline-block d-md-none">Account</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="./account.html"><strong>❤️ Saved</strong></a>
+                            <div class="dropdown-divider border-dark"></div>
+                            <a class="dropdown-item" href="mailto:team@peoplemovertech.com">✉️  Help</a>
+                            <a class="dropdown-item" href="#!">Log out</a>
+                        </div>
+                    </li>
+
                 </ul>
             </div>
         </div>
@@ -81,76 +83,77 @@
 
     <main>
         <!-- filter -->
-        <nav class="nav-filter">
+        <nav class="nav-filter text-dark">
+            <h1 class="sr-only">Poutine results</h1>
             <div class="container">
-                <div class="row align-items-center justify-content-between">
-                    <div class="col-2 col-md-1 col-lg-1">
-                        <a href="./"><img class="logo-filter" src="../img/logo/logo-en.svg" alt=""></a>
-                    </div>
-                    <div class="col-10 col-md-6 col-lg-3">
-                        <h1 class="sr-only">Poutine results</h1>
-                        <select class="flexselect form-control">
-                            <option value="" disabled selected>Search</option>
-                            <option value="1">Amazing Poutine Place</option>
-                            <option value="2">Arabian Nights</option>
-                            <option value="3">Blazing Balaszi</option>
-                            <option value="4">La Banquise</option>
-                            <option value="5">Benedict Pout</option>
-                            <option value="6">Behave Frieds</option>
-                            <option value="7">Cantley Fried Chicken</option>
-                            <option value="8">Harveys</option>
-                            <option value="9">JeePoutine Doan-Moi</option>
-                            <option value="10">Kentucky Fried Chicken</option>
-                            <option value="11">Loogart Poutines</option>
-                            <option value="12">Na'eem The Dream</option>
-                            <option value="13">Omnivore</option>
-                            <option value="14">Paulo et Suzanne</option>
-                            <option value="15">Stéphoutine Grondin</option>
-                            <option value="16">Thierry Mange Ici</option>
-                            <option value="17">Why so serious?</option>
-                        </select>
-                    </div>
-                    <div class="col-12 col-md-5 col-lg-4 py-2">
-                        <div class="d-flex">
-                            <div class="flex-fill">
-                                <a href="" class="btn btn-block btn-outline-secondary text-dark" data-toggle="modal" data-target="#modalLocation"><i class="fas fa-map-marker-alt mr-2"></i>Chaudiere-Appalaches</a>
-                            </div>
-                            <div class="flex-fill ml-3">
-                                <a href="" class="btn btn-block btn-outline-secondary text-dark" data-toggle="modal" data-target="#modalFilter"><i class="far fa-sliders-v mr-2"></i> Filter</a>
-                            </div>
+                <div class="nav-filter-grid">
+                    <div class="nav-filter-section mb-2 mb-sm-0">
+                        <div class="nav-filter-search">
+                            <select class="flexselect">
+                                <option value="" disabled selected>🔍 Search</option>
+                                <option value="1">Amazing Poutine Place</option>
+                                <option value="2">Arabian Nights</option>
+                                <option value="3">Blazing Balaszi</option>
+                                <option value="4">La Banquise</option>
+                                <option value="5">Benedict Pout</option>
+                                <option value="6">Behave Frieds</option>
+                                <option value="7">Cantley Fried Chicken</option>
+                                <option value="8">Harveys</option>
+                                <option value="9">JeePoutine Doan-Moi</option>
+                                <option value="10">Kentucky Fried Chicken</option>
+                                <option value="11">Loogart Poutines</option>
+                                <option value="12">Na'eem The Dream</option>
+                                <option value="13">Omnivore</option>
+                                <option value="14">Paulo et Suzanne</option>
+                                <option value="15">Stéphoutine Grondin</option>
+                                <option value="16">Thierry Mange Ici</option>
+                                <option value="17">Why so serious?</option>
+                            </select>
+                        </div>
+                        <div class="nav-filter-filters">
+                            <a class="btn btn-outline-dark btn-block" data-toggle="modal" data-target="#modalFilter"><i
+                                    class="far fa-sliders-v mr-2"></i> Filter</a>
                         </div>
                     </div>
-                    <div class="col-12 col-md-12 col-lg-4 text-lg-right py-2">
-                        <span class="mr-2">Showing 69 poutines</span>
-                        <div class="custom-control custom-switch d-inline-block">
-                            <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                            <label class="custom-control-label" for="customSwitch1">Map view</label>
+
+                    <div class="nav-filter-section justify-content-between">
+                        <div class="nav-filter-location">
+                            <small>
+                                <i class="fas fa-map-marker-alt mr-2"></i>Showing 69 pizzas in
+                                <a href="" class="d-block d-md-inline font-weight-bold text-dark" data-toggle="modal"
+                                    data-target="#modalLocation">Chaudiere-Appalaches</a>
+                            </small>
+                        </div>
+                        <div class="nav-filter-toggle">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                <label class="custom-control-label text-dark" for="customSwitch1">Map view</label>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </nav>
 
         <!-- results -->
         <section class="results">
+            <!-- results grid -->
             <div class="d-flex justify-content-center align-items-center p-5">
-                <div class="text-center">
-                    <img src="../img/artwork/mask-man.png" alt="" style="max-width:169px" class="mb-4">
-                    <h1 class="h3">Sorry, we couldn't find any results.</h1>
-                    <!-- Désolé, aucun résultat disponible. -->
-                    <p>Try changing or resetting your filters.</p>
-                    <!-- Modifiez ou réinitialisez vos filtres. -->
-                    <a class="btn btn-outline-dark mt-2" href="./results.html"><i class="far fa-redo mr-2"></i>Reset filters</a>     
-                    <!-- Réinitialiser les filtres -->           
-                </div>
+                <div  class="text-center"><img  src="../img/artwork/no-result.png" alt="" class="mb-2" style="max-width: 229px;"><h1  class="h3">Sorry, we couldn't find any results.</h1><p >Try changing or resetting your filters.</p><a href="results.html" class="btn btn-outline-dark mt-2"><i class="far fa-redo mr-2"></i>Reset Filters</a></div>
+                 </div>
+            <!-- map view -->
+            <div class="results-map d-none" id="resultsMap">
+                <div id="map"></div>
             </div>
 
         </section>
 
         <!-- Modal Product -->
-        <div class="preview-modal modal fade" id="itemModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="preview-modal modal fade" id="itemModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content">
+                <div class="modal-content bg-light text-dark">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <i class="fas fa-times"></i>
                     </button>
@@ -161,7 +164,7 @@
                     <div class="modal-body">
                         <h2 class="modal-resto">Resto name</h2>
                         <div class="d-flex flex-column flex-md-row justify-content-between">
-                            <h3 class="modal-item">Poutine name</h3>
+                            <h3 class="modal-item">Pizza name</h3>
                             <h3 class="modal-price">$$$</h3>
                         </div>
                         <p class="modal-description">It was all a dream, I used to read Word Up! magazine
@@ -171,37 +174,51 @@
                             I let my tape rock 'til my tape popped
                             Smokin' weed in Bambu, sippin' on Private Stock.</p>
                         <div class="saputo-badge">
-                            <a href="https://www.saputofoodservice.ca/" target="_blank"><img src="../img/logo/logo-saputo.svg" alt="" class="logo-saputo mr-3"></a><i>Made with Saputo Cheese</i>
+                            <a href="https://www.saputofoodservice.ca/" target="_blank"><img
+                                    src="../img/logo/logo-saputo.svg" alt="" class="logo-saputo mr-3"></a><i>Made with
+                                Saputo Cheese</i>
                         </div>
                         <!--  <p class="mb-0 mt-4"><strong>Links</strong></p>
                       <a href="#!" target="_blank">123 Burger Blvd, Montreal QC, H4N 7A1</a>-->
                         <div class="d-flex justify-content-start my-3">
-                            <a href="https://loogart.com" class="mr-4" target="_blank"><i aria-hidden="true" class="fab fa-facebook fa-2x" title="Facebook Page"></i></a>
-                            <a href="https://loogart.com" class="mr-4" target="_blank"><i aria-hidden="true" class="fab fa-instagram fa-2x" title="Instagram Page"></i></a>
-                            <a href="https://loogart.com" class="mr-4" target="_blank"><i aria-hidden="true" class="fab fa-twitter fa-2x" title="Twitter Page"></i></a>
-                            <a href="https://loogart.com" class="mr-4" target="_blank"><i aria-hidden="true" class="far fa-link fa-2x" title="Website"></i></a>
-                            <a href="https://loogart.com" class="mr-4" target="_blank"><i aria-hidden="true" class="fas fa-map-marker-alt fa-2x" title="Restaurant address"></i></a>
+                            <a href="https://loogart.com" class="mr-4" target="_blank"><i aria-hidden="true"
+                                    class="fab fa-facebook fa-2x" title="Facebook Page"></i></a>
+                            <a href="https://loogart.com" class="mr-4" target="_blank"><i aria-hidden="true"
+                                    class="fab fa-instagram fa-2x" title="Instagram Page"></i></a>
+                            <a href="https://loogart.com" class="mr-4" target="_blank"><i aria-hidden="true"
+                                    class="fab fa-twitter fa-2x" title="Twitter Page"></i></a>
+                            <a href="https://loogart.com" class="mr-4" target="_blank"><i aria-hidden="true"
+                                    class="far fa-link fa-2x" title="Website"></i></a>
+                            <a href="https://loogart.com" class="mr-4" target="_blank"><i aria-hidden="true"
+                                    class="fas fa-map-marker-alt fa-2x" title="Restaurant address"></i></a>
                         </div>
                     </div>
                     <div class="modal-footer justify-content-between">
 
-                        <!-- View Poutine -->
-                        <a href="./restaurant.html" class="btn btn-outline-primary" role="button" aria-pressed="true"><i class="far fa-external-link mr-2"></i> View</a>
+                        <!-- View Pizza -->
+                        <a href="./restaurant.html" class="btn btn-outline-primary" role="button" aria-pressed="true"><i
+                                class="far fa-external-link mr-2"></i> View</a>
 
                         <!-- Order generic now button -->
-                        <a href="https://www.chefcookit.com/en/pricing" target="_blank" class="btn btn-warning"><i class="far fa-external-link mr-2"></i>Order now</a>
+                        <a href="https://www.chefcookit.com/en/pricing" target="_blank" class="btn btn-warning"><i
+                                class="far fa-external-link mr-2"></i>Order now</a>
 
                         <!-- SKIP buton -->
-                        <a href="https://www.skipthedishes.com" target="_blank" class="btn btn-skip">Delivered by<img src="../img/logo/logo-skip-en-white.svg" class="logo-in-button" alt="SKIP the Dishes"></a>
+                        <a href="https://www.skipthedishes.com" target="_blank" class="btn btn-skip">Delivered by<img
+                                src="../img/logo/logo-skip-en-white.svg" class="logo-in-button"
+                                alt="SKIP the Dishes"></a>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Modal Location -->
-        <div class="modal" id="modalLocation" tabindex="-1" aria-labelledby="modalLocation" aria-hidden="true">
-            <div class="modal-dialog  modal-dialog-scrollable modal-lg">
-                <div class="modal-content">
+        <div class="modal fade" id="modalLocation" tabindex="-1" aria-labelledby="modalLocation" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                <div class="modal-content bg-light text-dark">
+                    <div class="bg-dark p-4 d-none d-md-block">
+                        <img src="../img/artwork/hero-artwork.png" class="img-fluid" alt="">
+                    </div>
                     <div class="modal-header">
                         <div class="container">
                             <h5 class="modal-title" id="exampleModalLabel">Select your location</h5>
@@ -210,13 +227,13 @@
                             <i class="fas fa-times"></i>
                         </button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body pt-0">
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-12 mb-4">
-                                    <a class="btn btn-primary" href="./results.html"><i class="fas fa-location-arrow mr-2"></i>Around me</a>
+                                <div class="col-12 mb-2">
+                                    <a class="btn btn-danger" href="./results.html"><i
+                                            class="fas fa-location-arrow mr-2"></i>Around me</a>
                                     <hr>
-
                                 </div>
                                 <div class="col-md-6 col-lg-4">
                                     <details>
@@ -318,32 +335,22 @@
                                     <details>
                                         <summary><span class="font-weight-bold">International</span></summary>
                                         <ul class="list-unstyled">
-                                            <li><a href="./results.html">Abbotsford</a></li>
-                                            <li><a href="./results.html">Burnaby</a></li>
-                                            <li><a href="./results.html">Kelowna</a></li>
-                                            <li><a href="./results.html">Richmond</a></li>
-                                            <li><a href="./results.html">Surrey</a></li>
-                                            <li><a href="./results.html">Vancouver</a></li>
-                                            <li><a href="./results.html">Victoria</a></li>
+                                            <li><a href="./results-none.html">No results</a></li>
                                         </ul>
                                     </details>
                                 </div>
                             </div>
-                            <div class="d-md-flex justify-content-between align-items-end">
-                                <img class="d-none d-md-block" src="../img/artwork/pug-hat.png" alt="" style="max-width:120px">
-                                <img class="" src="../img/artwork/delivery-bicycle.png" alt="" style="max-width:210px">
-                                <img class="d-none d-lg-block" src="../img/artwork/mask-man.png" alt="" style="max-width:160px">
-                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
 
-        <!-- Modal Location -->
+        <!-- Modal Filter -->
         <div class="modal" id="modalFilter" tabindex="-1" aria-labelledby="modalLocation" aria-hidden="true">
             <div class="modal-dialog">
-                <div class="modal-content">
+                <div class="modal-content bg-light text-dark">
                     <div class="modal-header">
                         <div class="container">
                             <h5 class="modal-title" id="exampleModalLabel">Sort and filter</h5>
@@ -377,11 +384,15 @@
                                 <div class="col-md-6">
                                     <div class="custom-control custom-checkbox mb-2">
                                         <input type="checkbox" class="custom-control-input" id="customCheck5">
-                                        <label class="custom-control-label" for="customCheck5"><img src="../img/logo/logo-saputo.svg" alt="Saputo" style="width:50px">&nbsp;Cheese</label>
+                                        <label class="custom-control-label" for="customCheck5"><img
+                                                src="../img/logo/logo-saputo.svg" alt="Saputo"
+                                                style="width:50px">&nbsp;Cheese</label>
                                     </div>
                                     <div class="custom-control custom-checkbox mb-2">
                                         <input type="checkbox" class="custom-control-input" id="customCheck6">
-                                        <label class="custom-control-label" for="customCheck6">Delivered by&nbsp;<img src="../img/logo/logo-skip-bi.svg" alt="SKIP The Dishes" style="width:60px"></label>
+                                        <label class="custom-control-label" for="customCheck6">Delivered by&nbsp;<img
+                                                src="../img/logo/logo-skip-bi.svg" alt="SKIP The Dishes"
+                                                style="width:60px"></label>
                                     </div>
                                     <div class="custom-control custom-checkbox mb-2">
                                         <input type="checkbox" class="custom-control-input" id="customCheck6">
@@ -409,14 +420,49 @@
                 </div>
             </div>
         </div>
+
+        <!-- Toast Saved and removed-->
+        <div class="position-fixed bottom-0 right-0 p-3" style="z-index: 5; right: 0; bottom: 0;">
+            <div id="elementSaved" class="toast hide text-dark" role="alert" aria-live="assertive" aria-atomic="true"
+                data-delay="2000">
+                <div class="toast-header text-dark">
+                    <strong class="mr-auto">✅  Saved</strong>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="toast-body">
+                    View <a href="account.html"><u>saved pizzas</u></a>.
+                </div>
+            </div>
+        </div>
+        <div class="position-fixed bottom-0 right-0 p-3" style="z-index: 5; right: 0; bottom: 0;">
+            <div id="elementRemoved" class="toast hide text-dark" role="alert" aria-live="assertive" aria-atomic="true"
+                data-delay="2000">
+                <div class="toast-header text-dark">
+                    <strong class="mr-auto">❌  Removed</strong>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="toast-body">
+                    You removed this saved item.
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-lg-6 mr-auto mb-4">
-                    <img class="d-block logo-footer" src="../img/logo/logo-en.svg" alt="">
-                    <p class="small text-muted">Cities:&nbsp;Montréal&nbsp; Winnipeg&nbsp; Vancouver&nbsp; Edmonton&nbsp; Calgary&nbsp; Regina&nbsp; Saskatoon&nbsp; Toronto&nbsp; Ottawa/Gatineau&nbsp; Laval&nbsp; Montérégie&nbsp; Centre du Québec&nbsp; Lanaudière&nbsp; Mauricie&nbsp; Chaudière Appalaches&nbsp; Bas St-Laurent&nbsp; Estrie&nbsp; Saguenay&nbsp; Côte-Nord&nbsp; Laurentides&nbsp; Abitibi&nbsp; International&nbsp; Québec</p>
+                    <img class="d-block logo-footer" src="../img/logo/logo-dark-en.svg" alt="">
+                    <p class="small text-light">Cities:&nbsp;Montréal&nbsp; Winnipeg&nbsp; Vancouver&nbsp;
+                        Edmonton&nbsp; Calgary&nbsp; Regina&nbsp; Saskatoon&nbsp; Toronto&nbsp; Ottawa/Gatineau&nbsp;
+                        Laval&nbsp; Montérégie&nbsp; Centre du Québec&nbsp; Lanaudière&nbsp; Mauricie&nbsp; Chaudière
+                        Appalaches&nbsp; Bas St-Laurent&nbsp; Estrie&nbsp; Saguenay&nbsp; Côte-Nord&nbsp;
+                        Laurentides&nbsp; Abitibi&nbsp; International&nbsp; Québec</p>
                 </div>
                 <div class="col-md-4 col-lg-2">
                     <h6>Links</h6>
@@ -425,6 +471,7 @@
                         <li><a href="mailto:naeem@peoplemovertech.com">Sponsorship</a></li>
                         <li><a href="./terms-and-privacy.html">Terms &amp; privacy</a></li>
                         <li><a href="https://leburgerweek.com" target="_blank">Le Burger Week</a></li>
+                        <li><a href="https://lapoutineweek.com" target="_blank">Le Poutine Week</a></li>
                         <li><a href="#!">Français</a></li>
                     </ul>
                 </div>
@@ -434,18 +481,23 @@
                         <li><a href="./login.html">Log in</a></li>
                         <li><a href="./sign-up.html">Sign up</a></li>
                         <li><a href="./faq.html">FAQ</a></li>
-                        <li><a href="./winners-2020.html">Winners</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4 col-lg-2">
                     <h6>Social media</h6>
                     <ul class="list-unstyled">
-                        <li><a href="https://facebook.com/lapoutineweek" target="_blank"><i class="fab fa-facebook mr-2"></i>Facebook</a></li>
-                        <li><a href="https://instagram.com/lapoutineweek" target="_blank"><i class="fab fa-instagram mr-2"></i>Instagram</a></li>
+                        <li><a href="https://facebook.com/lapoutineweek" target="_blank"><i
+                                    class="fab fa-facebook mr-2"></i>Facebook</a></li>
+                        <li><a href="https://instagram.com/lapoutineweek" target="_blank"><i
+                                    class="fab fa-instagram mr-2"></i>Instagram</a></li>
                     </ul>
                 </div>
                 <div class="col-12">
-                    <span class="text-subfooter text-muted">© 2020-2021 La Poutine Week&nbsp;|&nbsp; <a href="https://peoplemover.tech/" target="_blank">People Mover Technologies Inc.</a>&nbsp;|&nbsp; Designed with<i class="far fa-heart mx-1"></i>and<i class="far fa-coffee mx-1"></i> by <a href="https://loogart.com" target="_blank">Loogart</a></span>
+                    <span class="text-subfooter text-warning">© 2021 La Pizza Week&nbsp;|&nbsp; <a
+                            href="https://peoplemover.tech/" target="_blank">People Mover Technologies
+                            Inc.</a>&nbsp;|&nbsp; Designed with<i class="far fa-heart mx-1"></i>and<i
+                            class="far fa-coffee mx-1"></i> by <a href="https://loogart.com"
+                            target="_blank">Loogart</a></span>
                 </div>
             </div>
         </div>
@@ -457,6 +509,9 @@
     <script src="../js/jquery.flexselect.js"></script>
     <script src="../js/lightgallery.js"></script>
     <script src="../js/lg-zoom.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxEirwPY5lQXNNXuY9lzjQIwGJlWby7Nw&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxEirwPY5lQXNNXuY9lzjQIwGJlWby7Nw&callback=initMap"
+        async defer></script>
     <script src="../js/scripts.js"></script>
-</body></html>
+</body>
+
+</html>
