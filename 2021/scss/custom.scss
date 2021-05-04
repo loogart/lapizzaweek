@@ -550,7 +550,7 @@ a.winner-item {
         opacity: .8;
     }
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
         width: 100%;
     }
 }
@@ -560,7 +560,7 @@ a.winner-item {
     width: 120px;
     height: 80px;
     border-radius: 12px;
-    background-color: $beige;
+    background-color: #e5e5e5;
 }
 
 .faq-item {

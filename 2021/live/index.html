@@ -45,6 +45,15 @@
 </head>
 
 <body>
+        <!-- alert above the navbar -->
+        <div class="alert alert-dismissible bg-success rounded-0 fade show" role="alert">
+            <div class="container text-center">
+                <a href="./winners.html" class="text-white"><strong><i class="far fa-trophy-alt mr-2"></i>And it's a wrap!</strong> Check out the La PizzaWeek 2021 winners.</a>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="./"><img class="navbar-logo" src="../img/logo/logo-navbar-en.svg"
@@ -55,6 +64,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./winners.html">🏆 2021 Winners</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./results.html">🍕 Find a pizza</a>
                     </li>
@@ -90,7 +102,8 @@
                         <h1 class="jumbo"><span class="subtitle">May 1-7, 2021</span>It’s a pizza party!</h1>
                         <p class="lead">Find the perfect pizza to satisfy your cravings. <br
                                 class="d-block d-md-none">Order, eat and rate it!</p>
-                        <a class="btn btn-danger btn-lg big-cta" href="#modalLocation" data-toggle="modal"  role="button">🔍 Find a pizza</a>
+                        <!-- <a class="btn btn-danger btn-lg big-cta" href="#modalLocation" data-toggle="modal"  role="button">🔍 Find a pizza</a> -->
+                        <a class="btn btn-success btn-lg big-cta" href="./winners.html" data-toggle="modal"  role="button">🏆  View winners</a>
                     </div>
                     <div class="col-lg-6">
                         <div class="d-flex align-items-end justify-content-center">

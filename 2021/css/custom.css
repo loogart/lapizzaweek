@@ -10343,7 +10343,7 @@ a.winner-item {
 a.winner-item:hover, a.winner-item:focus, a.winner-item:active {
   opacity: 0.8;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   a.winner-item {
     width: 100%;
   }
@@ -10354,7 +10354,7 @@ a.winner-item:hover, a.winner-item:focus, a.winner-item:active {
   width: 120px;
   height: 80px;
   border-radius: 12px;
-  background-color: #F4B88C;
+  background-color: #e5e5e5;
 }
 
 .faq-item {
