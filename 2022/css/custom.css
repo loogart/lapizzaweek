@@ -10963,4 +10963,8 @@ footer a {
   transform: rotate(30deg);
 }
 
+form.payment .form-control {
+  color: #343a40;
+}
+
 /*# sourceMappingURL=custom.css.map */

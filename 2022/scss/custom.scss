@@ -28,7 +28,7 @@ $theme-colors: ("success": $green, "danger":$red, "warning":$orange, "light":$wh
 
 // customize theme
 $body-bg: $black;
-$body-color:rgb(223, 200, 200);
+$body-color:#dfc8c8;
 $font-family-sans-serif: 'Poppins',
 sans-serif;
 $headings-font-family:'Poppins',
@@ -1194,4 +1194,10 @@ footer {
     height: 32px;
     margin-right: 10px;
     transform: rotate(30deg);
+}
+
+form.payment{
+    .form-control {
+        color:$dark;
+    }
 }

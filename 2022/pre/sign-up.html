@@ -178,7 +178,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="my-5"><a class="btn btn-success btn-lg btn-block big-cta" href="./thank-you.html"><i class="far fa-lock mr-2"></i> Pay and register</a></p>
+                            <!-- <p class="my-5"><a class="btn btn-success btn-lg btn-block big-cta" href="./thank-you.html"><i class="far fa-lock mr-2"></i> Pay and register</a></p> -->
+                            <a href="#" data-toggle="modal" data-target="#popupPayment"
+                            class="btn btn-success btn-lg btn-block big-cta my-4">💰 Continue
+                            to payment</a>
                             <span class=" d-block small text-muted text-center">*If you can not afford the entry fee, send us an email and we will help you participate! The fees are the minimum we calculated to run the festival.”</span>
                         </form>
                     </div>
@@ -186,6 +189,78 @@
             </div>
         </section>
     </main>
+
+    <!-- Modal Payment-->
+    <div class="modal fade" id="popupPayment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title text-dark" id="exampleModalLabel">💰 Payment information</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="payment">
+                        <div class="form-group">
+                            <label for="formNameCard">Full name (on the card)</label>
+                            <input type="text" class="form-control form-control-lg bg-white border-dark" id="formNameCard" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="formCardNumber">Card Number</label>
+                            <input type="text" class="form-control form-control-lg bg-white border-dark" id="formCardNumber" placeholder="">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                              <label for="formExp">Expiration</label>
+                              <input type="text" class="form-control form-control-lg bg-white border-dark" id="formExp" placeholder="MM/YY">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="formCVV">Expiration</label>
+                                <input type="text" class="form-control form-control-lg bg-white border-dark" id="formCVV" placeholder="123">
+                              </div>
+                              <div class="form-group col-md-4">
+                                <label for="formPostal">Postal code</label>
+                                <input type="text" class="form-control form-control-lg bg-white border-dark" id="formPostal" placeholder="A1A 2B2">
+                              </div>
+                          </div>
+                          <div class="form-group py-3">
+                            <label for="formDiscount">Discount Code</label>
+                            <div class="input-group mb-2">
+                                <input type="text" class="form-control form-control-lg bg-white border-dark" placeholder="" >
+                                <div class="input-group-append">
+                                    <button class="btn btn-dark rounded-0" type="button" id="formDiscount"><i
+                                            class="far fa-tag mr-1"></i> Apply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="custom-border border-dark">
+
+                        <div class="d-flex justify-content-between mb-2 text-dark">
+                            <div>Subtotal</div>
+                            <div>$250.00</div>
+                        </div>
+                        <div class="d-flex justify-content-between text-dark">
+                            <div>Taxes</div>
+                            <div>$37.44</div>
+                        </div>
+
+                        <hr class="custom-border border-dark">
+                        <div class="d-flex justify-content-between font-weight-bold text-dark">
+                            <div>TOTAL</div>
+                            <div>$287.44</div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer border-top-0">
+                    <a  href="thank-you.html" class="btn btn-warning btn-lg btn-block shadow">🔒 Pay and register</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <footer>
         <div class="container">
             <div class="row">
