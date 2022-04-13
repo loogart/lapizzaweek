@@ -10529,7 +10529,7 @@ a.leaderboard-box:hover, a.leaderboard-box:focus, a.leaderboard-box:active {
   padding-bottom: 0.5rem;
   position: sticky;
   position: -webkit-sticky;
-  top: 73px;
+  top: 63px;
   z-index: 2;
   background-color: #f8f9fa;
   border-bottom: 1px solid #261C1F;

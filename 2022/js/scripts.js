@@ -432,10 +432,10 @@ $(function () {
 $('#voteNow').click(function () {
     if ($(this).hasClass("btn-outline-danger")) {
         $('#modalUnvoted').modal('show');
-        $(this).removeClass('btn-outline-danger').addClass('btn-danger').text("Rate  this poutine");
+        $(this).removeClass('btn-outline-danger').addClass('btn-danger').text("⭐️ Rate  this pizza");
     } else {
         $('#modalVote1').modal('show');
-        $(this).removeClass('btn-danger').addClass('btn-outline-danger').text("Remove rating");
+        $(this).removeClass('btn-danger').addClass('btn-outline-danger').text("❌ Remove rating");
     }
 });
 
